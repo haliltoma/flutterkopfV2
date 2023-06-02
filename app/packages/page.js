@@ -5,7 +5,7 @@ import {useRouter} from "next/navigation";
 import FilterMenu from "@/components/Packages/FilterMenu";
 import PackageLists from "@/components/Packages/PackageLists";
 
-const page = () => {
+const Page = () => {
     const [searchText, setSearchText] = useState('')
     const router = useRouter()
     const handleSearch = (e) => {
@@ -32,8 +32,8 @@ const page = () => {
                            className='bg-none  h-16 placeholder:text-gray-500 focus:border-none focus:outline-none text-3xl  placeholder:text-2xl bg-[#35404d]'/>
                 </div>
             </section>
-                <div className='container mx-auto flex '>
-                    <FilterMenu/>
+                <div className='container mx-auto flex min-h-screen'>
+                    <FilterMenu searchText={searchText} setSearchText={setSearchText} />
                     <PackageLists/>
                 </div>
             </main>
@@ -42,4 +42,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

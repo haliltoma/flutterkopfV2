@@ -2,7 +2,7 @@ import React from 'react'
 import FilterMenu from "@/components/Packages/FilterMenu";
 import PackageLists from "@/components/Packages/PackageLists";
 
-const page = () => {
+const Page = () => {
   return (
     <main className='flex w-full '>
       <FilterMenu/>
@@ -11,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
